@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Successful | Dhaval’s Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .success-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            text-align: center;
+            background-color: #f7f9fa;
+            padding: 30px;
+        }
+
+        .success-container img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .success-container h1 {
+            color: #1f77b4;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .success-container p {
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .success-container a {
+            text-decoration: none;
+            background-color: #1f77b4;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .success-container a:hover {
+            background-color: #155c8b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">Dhaval’s Store</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="cart.html">Cart</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="login.html" onclick="logout()">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Success Section -->
+    <div class="success-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Success Icon" />
+        <h1>Order Placed Successfully!</h1>
+        <p>Thank you for shopping with us 🎉<br>Your payment has been received and your order is on its way.</p>
+        <a href="index.html">Continue Shopping</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+/* 🌟 General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+body {
+  background-color: #eaeded;
+  color: #111;
+}
+
+/* 🌟 Navbar */
+.navbar {
+  background-color: #131921;
+  color: white;
+  padding: 12px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #febd69;
+  text-decoration: none;
+}
+
+#search-box {
+  padding: 8px;
+  border-radius: 6px;
+  width: 360px;
+  border: none;
+}
+
+/* 🌟 Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* 🌟 Section title */
+.section-title {
+  text-align: center;
+  margin: 20px 0;
+  color: #232f3e;
+}
+
+/* 🌟 Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 25px;
+}
+
+.product {
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.product h3 {
+  font-size: 1rem;
+  color: #232f3e;
+  margin-bottom: 6px;
+}
+
+.product .price {
+  font-weight: bold;
+  color: #b12704;
+  margin-bottom: 8px;
+}
+
+.product .actions {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.add-to-cart,
+.add-to-wishlist,
+.button {
+  background-color: #febd69;
+  padding: 8px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+}
+
+.add-to-wishlist {
+  background-color: #007185;
+  color: white;
+}
+
+.add-to-cart:hover,
+.add-to-wishlist:hover {
+  opacity: 0.95;
+}
+
+/* 🌟 Cart & Wishlist containers */
+.cart-container,
+.wishlist-container,
+.checkout-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item,
+.wishlist-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item img,
+.wishlist-item img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.item-info {
+  flex: 1;
+  margin-left: 12px;
+}
+
+/* remove button */
+.remove-btn {
+  background: crimson;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Checkout button */
+.checkout-btn {
+  display: inline-block;
+  margin-top: 14px;
+  background-color: #febd69;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* Auth */
+.auth-container {
+  width: 360px;
+  margin: 80px auto;
+  padding: 28px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h2 {
+  text-align: center;
+  color: #232f3e;
+  margin-bottom: 18px;
+}
+.auth-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.auth-container button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #febd69;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 14px;
+  background: #131921;
+  color: #fff;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #search-box {
+    width: 180px;
+  }
+  .nav-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .products-grid {
+    padding: 12px;
+  }
+  .auth-container {
+    width: 92%;
+    margin: 40px auto;
+  }
+  .cart-item,
+  .wishlist-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment | Amazon Clone</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="checkout-container">
+        <h2>Payment Options</h2>
+        <form onsubmit="processPayment(event)">
+            <h2>Select Payment Method</h2>
+            <label><input type="radio" name="payment" value="Credit Card" /> Credit Card</label><br>
+            <label><input type="radio" name="payment" value="Debit Card" /> Debit Card</label><br>
+            <label><input type="radio" name="payment" value="UPI" /> UPI</label><br>
+            <label><input type="radio" name="payment" value="Cash on Delivery" /> Cash on Delivery</label><br><br>
+            <button type="submit" class="checkout-btn">Pay Now</button>
+        </form>
+
+        <p><a href="checkout.html">Back to Checkout</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

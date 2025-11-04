@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sign Up — Amazon Clone</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-left">
+            <a class="logo" href="index.html">Amazon Clone</a>
+        </div>
+        <div class="nav-right nav-links">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart 🛒 <span id="cart-count">0</span></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <label for="signup-name">Full Name</label>
+                <input id="signup-name" type="text" placeholder="Your full name" required />
+                <label for="signup-email">Email</label>
+                <input id="signup-email" type="email" placeholder="you@example.com" required />
+                <label for="signup-password">Password</label>
+                <input id="signup-password" type="password" placeholder="Choose a password" required />
+                <button type="submit">Sign Up</button>
+            </form>
+            <p style="text-align:center;margin-top:12px;">
+                Already have an account? <a href="login.html">Login here</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Dhaval Dhrangadhariya — Amazon Clone Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // wire signup form to script.js registerUser(name,email,password)
+        document.getElementById('signup-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('signup-name').value.trim();
+            const email = document.getElementById('signup-email').value.trim().toLowerCase();
+            const password = document.getElementById('signup-password').value;
+            if (!name || !email || !password) return alert('Please fill all fields.');
+            registerUser(name, email, password);
+        });
+    </script>
+</body>
+
+</html>
